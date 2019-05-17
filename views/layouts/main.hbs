@@ -7,16 +7,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title></title>
   </head>
   <style >
   .box{
-    border: 1px solid green;
     height: 200px;
     width: 200px;
-    box-shadow: 5px 10px #888888;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   text-align: center;
     margin-right: 40px;
     margin-bottom: 40px;
   }
@@ -55,9 +55,9 @@
                                 datas=JSON.parse(data);
                                 if(datas.length>=2)
                                 {
-                                     var str='';
+                                     var str="<div class='container'><div class='row'>";
                                       datas.forEach(function(data){
-                                      str+= "<div class='box col-md-3'><h3>"+ data.MovieName + '</h3>';
+                                      str+= "<div class='box col-md-3 col-sm-6'><h3>"+ data.MovieName + '</h3>';
                                       str +=  '<h5>IMDbb Rating :-'+ data.IMDbRating + '</h5>';
                                       str +=  '<h5> Release Year:-' + data.Year + '</h5>';
                                       str +=  '<h5>Awards :-' + data.Awards + '</h5>';
@@ -98,6 +98,6 @@
             <div class="form-group">
             <input class="form-control" type="text"  name="search" id="search" placeholder="Please Enter the name" style="margin-top:20px;width:200px; border-radius:10px;width:100%;">
             </div>
-            <div id="result" style="background-color:red;"></div>
+            <div id="result"></div></div></div>
   </body>
 </html>
